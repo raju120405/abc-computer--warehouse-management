@@ -24,7 +24,7 @@ const Login = () => {
     return (
         <div>
             <h2>this is login pages</h2>
-            <div className='text-center '> <button onClick={hanleSignIn} type="button" class="btn btn-success">Google Sign In</button></div>
+            <div className='text-center '> <button onClick={hanleSignIn} type="button" className="btn btn-success">Google Sign In</button></div>
         </div>
     );
 };
