@@ -9,17 +9,29 @@ const Login = () => {
 
     let navigate = useNavigate();
     let location = useLocation();
-   
-  
+
+
     let from = location.state?.from?.pathname || "/";
 
     const hanleSignIn = () => {
         signInWithGoogle()
-        
-            if(user)
-            {
-                navigate(from, { replace: true });
-            }
+
+        if (user) {
+            const url = "http://localhost:5000/login"
+            fetch(url, {
+                method: 'POST',
+                body: JSON.stringify({
+                    email: user.email
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            })
+                .then((response) => response.json())
+                .then((json) => console.log(json));
+
+            navigate(from, { replace: true });
+        }
     }
     return (
         <div>

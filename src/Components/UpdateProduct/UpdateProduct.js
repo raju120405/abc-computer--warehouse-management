@@ -7,6 +7,8 @@ const UpdateProduct = () => {
         const name = event.target.name.value;
         const price = event.target.price.value;
         console.log(name,price)
+
+
         const url = 'http://localhost:5000/uploadPd';
         fetch(url, {
             method: 'POST',
@@ -18,8 +20,11 @@ const UpdateProduct = () => {
             },
         })
             .then((response) => response.json())
-            .then((json) => console.log(json));
-        
+            .then((data) => {
+                console.log(data)
+                event.target.reset()
+            })
+            
     }
     return (
         <div>
