@@ -8,6 +8,7 @@ import Login from './Components/Login/Login';
 import Navbar from './Components/Navbar/Navbar';
 import Notfound from './Components/Notfound/Notfound';
 import Products from './Components/Products/Products';
+import Register from './Components/Register/Register';
 
 import UpdateProduct from './Components/UpdateProduct/UpdateProduct';
 import PrivatRoute from './PrivatRoute/PrivatRoute';
@@ -28,6 +29,7 @@ function App() {
           <UpdateProduct></UpdateProduct>
         </PrivatRoute>} />
         <Route path="login" element={<Login></Login>} />
+        <Route path="register" element={<Register></Register>} />
         <Route path="*" element={<Notfound></Notfound>} />
       </Routes>
       <footer className='text-center bg-secondary p-5 mt-4'>
