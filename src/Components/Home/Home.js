@@ -13,6 +13,7 @@ const Home = () => {
     return (
         <div className='container'>
             <h2 className='text-primary text-center mt-3 mb-3'>Welcome To ABC Computers</h2>
+            {/* slider section */}
             <div id="carouselExampleCaptions" className='carousel slide' data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -51,7 +52,7 @@ const Home = () => {
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-
+                        {/* cadr section */}
             <div className='row container text-center mb-3 mt-5'>
                 {
                     products.map(pd => (<div className='col-4' key={pd._id}>
@@ -73,28 +74,46 @@ const Home = () => {
                 }
                 <div>
                     {/* section 1 */}
-                    <div className='mt-5'>
+                    <div className='mt-5 mb-4'>
                         <div className='row'>
                             <div className='col-sm-5 col-md-6'>
-                            <img src="https://i.ibb.co/vjHH3j3/michail-sapiton-al-CEn-Nmzh-PE-unsplash-1-50-2.jpg" alt="" />
-                            
+                                <img src="https://i.ibb.co/vjHH3j3/michail-sapiton-al-CEn-Nmzh-PE-unsplash-1-50-2.jpg" alt="" />
+
                             </div>
                             <div className='col-sm-5 offset-sm-2 col-md-6 offset-md-0'>
-                                
-
+                                <h3>Buy MacBook Pro - Apple</h3>
+                                <h5>8-Core CPU
+                                    14-Core GPU
+                                    16GB Unified Memory
+                                    512GB SSD Storage¹</h5>
+                                <p>16-core Neural Engine
+                                    14-inch Liquid Retina XDR display
+                                    Three Thunderbolt 4 ports, HDMI port, SDXC card slot, MagSafe 3 port
+                                    Magic Keyboard with Touch ID
+                                    Force Touch trackpad
+                                    67W USB-C Power Adapter</p>
+                                    <a href="#" class="btn btn-primary">Explorer Now</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div>
-                    {/* section 1 */}
-                    <div className='mt-5'>
+                    {/* section 2 */}
+                    <div className='mt-5 mb-3'>
                         <div className='row'>
-                        <div className='col-sm-5 offset-sm-2 col-md-6 offset-md-0'> voluptate ratione magnam fuga!</div>
+                            <div className='col-sm-5 offset-sm-2 col-md-6 offset-md-0'>
+                                <h3>Apple MacBook Air</h3>
+                                <h5>Apple MacBook Air 13.3-Inch Retina Display 8-core Apple M1 chip with 8GB RAM, 256GB SSD (MGN63) Space Gray</h5>
+                                <p>Apple M1 chip with 8-core CPU and 7-core GPU
+                                    8GB RAM
+                                    256GB SSD
+                                    13.3-inch 2560x1600 LED-backlit Retina Display</p>
+                                    <a href="#" class="btn btn-primary">Explorer Now</a>
+                            </div>
 
                             <div className='col-sm-5 col-md-6'>
-                            <img src="https://i.ibb.co/HHxCw2v/wesson-wang-y0-v-Fx-OHayg-unsplash-1.jpg" alt="" />
-                            
+                                <img src="https://i.ibb.co/HHxCw2v/wesson-wang-y0-v-Fx-OHayg-unsplash-1.jpg" alt="" />
+
                             </div>
                         </div>
                     </div>

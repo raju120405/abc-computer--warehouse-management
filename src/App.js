@@ -27,7 +27,7 @@ function App() {
         <Route path="login" element={<Login></Login>} />
       </Routes>
       <footer className='text-center bg-secondary p-5 mt-4'>
-        <p className='text-white'>this is footer</p>
+        <p className='text-white'>Copyright © 2022 ABC Computers</p>
       </footer>
     </div>
   );
