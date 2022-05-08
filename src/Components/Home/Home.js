@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
 
@@ -9,6 +10,7 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
+    
 
     return (
         <div className='container'>
@@ -52,12 +54,12 @@ const Home = () => {
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-                        {/* cadr section */}
+            {/* cadr section */}
             <div className='row container text-center mb-3 mt-5'>
                 {
-                    products.map(pd => (<div className='col-4' key={pd._id}>
+                    products.slice(0, 6).map(pd => (<div className='col-lg-4 col-md-6 col-sm-12 ' key={pd._id}>
 
-                        <div class="card mb-3">
+                        <div class="card mb-3 ">
                             <img src={pd.picture} alt="" />
                             <div class="card-body">
                                 <h5 class="card-title"> Name: {pd.name}</h5>
@@ -66,7 +68,7 @@ const Home = () => {
                                 <h6>Supplier: {pd.Supplier}</h6>
                                 <p>description: {pd.description}</p>
 
-                                <a href="#" class="btn btn-primary">Delivered</a>
+                                <button className='btn btn-primary'>Product Details</button>
 
                             </div>
                         </div>
@@ -92,7 +94,7 @@ const Home = () => {
                                     Magic Keyboard with Touch ID
                                     Force Touch trackpad
                                     67W USB-C Power Adapter</p>
-                                    <a href="#" class="btn btn-primary">Explorer Now</a>
+                                <a href="#" class="btn btn-primary">Explorer Now</a>
                             </div>
                         </div>
                     </div>
@@ -108,7 +110,7 @@ const Home = () => {
                                     8GB RAM
                                     256GB SSD
                                     13.3-inch 2560x1600 LED-backlit Retina Display</p>
-                                    <a href="#" class="btn btn-primary">Explorer Now</a>
+                                <a href="#" class="btn btn-primary">Explorer Now</a>
                             </div>
 
                             <div className='col-sm-5 col-md-6'>
