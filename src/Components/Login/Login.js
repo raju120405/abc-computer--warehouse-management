@@ -1,24 +1,33 @@
 import React, { useRef } from 'react';
 import auth from '../../Firebase/Firebase.init';
-import { useAuthState, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const Navigate = useNavigate()
+    const [
+        signInWithEmailAndPassword,
+        emailuser,
+        emailloading,
+        emailerror,
+      ] = useSignInWithEmailAndPassword(auth);
+      if(emailuser){
+        Navigate('/products')
+      }
     const handleSubmit = event => {
         event.preventDefault();
 
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         console.log(email, password);
-
+        signInWithEmailAndPassword(email,password)
     }
     const navigateRagister = event => {
         Navigate('/register')
     }
-
+   
 
     const [googleuser, googleloading, googleerror] = useAuthState(auth);
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -64,7 +73,7 @@ const Login = () => {
                 </div>
                 <p>New to Abc Computer? <Link to={'/register'} className='text-danger text-decoration-none' onClick={navigateRagister}>Please Register</Link></p>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Login</button>
             </form>
 
 
