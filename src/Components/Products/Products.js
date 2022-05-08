@@ -12,10 +12,9 @@ const Products = () => {
             <h2 className='text-center m-4'>Total Products: {products.length}</h2>
             <div className='row container text-center'>
                 {
-                    products.map(pd => (<div className='col-4 '>
+                    products.map(pd => (<div className='col-4' key={pd._id}>
 
                         <div class="card text-center">
-                            {/* <img src="..." class="card-img-top" alt="..."> */}
                             <img src={pd.picture} alt="" />
                             <div class="card-body">
                                 <h5 class="card-title"> Name: {pd.name}</h5>
