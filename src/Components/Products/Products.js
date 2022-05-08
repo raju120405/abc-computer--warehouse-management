@@ -13,14 +13,14 @@ const Products = () => {
 
     const handleOder = (products) => {
         const { name, price } = products
-        console.log(products,user.email);
+        console.log(products, user.email);
         fetch('http://localhost:5000/addOrder', {
             method: 'PATCH',
             body: JSON.stringify({
-               name,
-               price,
-               email:user.email
-               
+                name,
+                price,
+                email: user.email
+
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
@@ -45,7 +45,7 @@ const Products = () => {
                                 <h6>Supplier: {pd.Supplier}</h6>
                                 <p>description: {pd.description}</p>
 
-                                <button class="btn btn-primary" onClick={() => handleOder(pd)}>Order Now</button>
+                                <button  class="btn btn-primary" onClick={() => handleOder(pd)}>Order Now</button>
                             </div>
                         </div>
                     </div>))
