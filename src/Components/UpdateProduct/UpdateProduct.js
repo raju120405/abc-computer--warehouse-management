@@ -13,7 +13,7 @@ const UpdateProduct = () => {
         console.log(name,price,quantity,supplier,description,picture)
 
 
-        const url = 'http://localhost:5000/uploadPd';
+        const url = 'https://tranquil-badlands-27515.herokuapp.com/uploadPd';
         fetch(url, {
             method: 'POST',
             body: JSON.stringify({

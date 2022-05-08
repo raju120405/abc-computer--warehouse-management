@@ -61,7 +61,7 @@ const Login = () => {
         }
         if (user) {
             navigate(from, { replace: true });
-            const url = "http://localhost:5000/login"
+            const url = "https://tranquil-badlands-27515.herokuapp.com/login"
             fetch(url, {
                 method: 'POST',
                 body: JSON.stringify({

@@ -6,7 +6,7 @@ const Products = () => {
     const [products, setProducts] = useState([])
     const [user, loading, error] = useAuthState(auth);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://tranquil-badlands-27515.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -14,7 +14,7 @@ const Products = () => {
     const handleOder = (products) => {
         const { name, price } = products
         console.log(products, user.email);
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://tranquil-badlands-27515.herokuapp.com/addOrder', {
             method: 'PATCH',
             body: JSON.stringify({
                 name,

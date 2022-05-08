@@ -6,7 +6,7 @@ const Home = () => {
 
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://tranquil-badlands-27515.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -79,7 +79,7 @@ const Home = () => {
                     <div className='mt-5 mb-4'>
                         <div className='row'>
                             <div className='col-sm-5 col-md-6'>
-                                <img src="https://i.ibb.co/vjHH3j3/michail-sapiton-al-CEn-Nmzh-PE-unsplash-1-50-2.jpg" alt="" />
+                                <img src="https://i.ibb.co/V3R2X03/michail-sapiton-al-CEn-Nmzh-PE-unsplash-2.jpg" alt="" />
 
                             </div>
                             <div className='col-sm-5 offset-sm-2 col-md-6 offset-md-0'>
@@ -114,7 +114,7 @@ const Home = () => {
                             </div>
 
                             <div className='col-sm-5 col-md-6'>
-                                <img src="https://i.ibb.co/HHxCw2v/wesson-wang-y0-v-Fx-OHayg-unsplash-1.jpg" alt="" />
+                                <img src="https://i.ibb.co/K6Hcd8J/mohamed-m-u-Amgf8k-Rvqg-unsplash-1.jpg" alt="" />
 
                             </div>
                         </div>
